@@ -6,7 +6,7 @@ contract TokenERC20 {
     // Public variables of the token
     string public name;
     string public symbol;
-    uint8 public decimals = 18;
+    uint8 public decimals = 18; //ES POT CANVIAR PERO ES RECOMANA QUE NO
     // 18 decimals is the strongly suggested default, avoid changing it
     uint256 public totalSupply;
 
@@ -33,10 +33,10 @@ contract TokenERC20 {
         string tokenName,
         string tokenSymbol
     ) public {
-        totalSupply = 100000000 * 10 ** uint256(decimals);  // Update total supply with the decimal amount
+        totalSupply = 100000000 * 10 ** uint256(decimals);  // QUANTITAT ES POT CANVIAR DEPENEN DELS TOKENS QUE ES VULGUIN CREAR
         balanceOf[msg.sender] = totalSupply;                // Give the creator all initial tokens
-        name = "Ropsten Final Token";                                   // Set the name for display purposes
-        symbol = "RFF";                               // Set the symbol for display purposes
+        name = "Ropsten Final Token";                                   // S'HA DE CANVIAR EL NOM
+        symbol = "RFF";                               // S'HA DE CANVIAR EL SIMBOL TAMBE
     }
 
     /**
